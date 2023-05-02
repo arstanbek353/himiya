@@ -1,0 +1,184 @@
+.form {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+  }
+  &__item {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 100%;
+    &--50 {
+      width: 50%;
+    }
+    &--33 {
+      width: 33.3333%;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem 3rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 2rem 3rem 6rem rgba(15, 7, 62, 0.05);
+    border-radius: 1rem;
+    color: #000;
+    &::placeholder {
+      color: #848794;
+    }
+  }
+  &__textarea {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem 3rem;
+    padding-top: 2.7rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 2rem 3rem 6rem rgba(15, 7, 62, 0.05);
+    border-radius: 1rem;
+    color: #000;
+    &::placeholder {
+      color: #848794;
+    }
+    &--big {
+      height: 15rem;
+    }
+  }
+  &__select {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem 3rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 2rem 3rem 6rem rgba(15, 7, 62, 0.05);
+    border-radius: 1rem;
+    color: #848794;
+    font: inherit;
+  }
+  &__actions {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &--modal {
+      justify-content: flex-start;
+      gap: 10rem;
+      margin-top: 9rem;
+    }
+  }
+  &__conf {
+    display: flex;
+    &-label {
+      display: inline-block;
+      span {
+        display: inline-block;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 100%;
+        border: 2px solid #000000;
+      }
+      input:checked + span {
+        background-image: url(../images/dist/accepted.svg);
+        background-repeat: no-repeat;
+        background-size: 96%;
+        background-position: center;
+        border: 0;
+      }
+      input:focus + span {
+        opacity: 0.5;
+      }
+    }
+    &-text {
+      line-height: 135.9%;
+      color: #000000;
+      opacity: 0.5;
+      margin-left: 1.3rem;
+    }
+  }
+  &__send {
+    font-family: $secondfont;
+    font-size: 1.8rem;
+    padding: 1.8rem 11.8rem;
+  }
+  &--modal {
+    .form {
+      &__input {
+        padding: 2rem 0;
+        border: none;
+        border-bottom: 2px solid #222222;
+        border-radius: 0;
+        box-shadow: none;
+        height: 7rem;
+      }
+      &__textarea {
+        padding: 2rem 0;
+        border: none;
+        border-bottom: 2px solid #222222;
+        border-radius: 0;
+        box-shadow: none;
+        height: 7rem;
+      }
+      &__select {
+        border: none;
+        padding: 0;
+        border-bottom: 2px solid #222222;
+        box-shadow: none;
+        border-radius: 0;
+        height: 7rem;
+      }
+    }
+  }
+  @media (max-width: 48em) {
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -0.75rem;
+    }
+    &__item {
+      padding: 0.75rem;
+      font-size: 1.8rem;
+      &--50 {
+        width: 100%;
+      }
+    }
+    &__input {
+      width: 100%;
+      height: 6.3rem;
+      padding: 1rem 1.4rem;
+    }
+    &__textarea {
+      width: 100%;
+      height: 6.3rem;
+      padding: 1rem 1.4rem;
+      padding-top: 2.2rem;
+      &--big {
+        height: 10rem;
+      }
+    }
+    &__select {
+      width: 100%;
+      height: 6.3rem;
+      padding: 1rem 1rem;
+    }
+    &__actions {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: stretch;
+      &--review {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .stars {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+    &__send {
+      width: 100%;
+      font-size: 1.4rem;
+      padding: 1.8rem 5rem;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.contact-form {
+  background-color: #fff;
+  &__inner {
+    padding: 9rem 0;
+    padding-bottom: 15rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 4.6rem;
+    color: #060606;
+    margin-bottom: 2.7rem;
+  }
+  &__text {
+    font-size: 2.4rem;
+    line-height: 138.4%;
+    color: #12121A;
+    a {
+      color: #E78512;
+    }
+  }
+  &__right {
+    width: 98rem;
+  }
+  @media (max-width: 48em) {
+    background-color: #fff;
+    &__inner {
+      padding-top: 4rem;
+      display: block;
+    }
+    &__left {
+      margin-bottom: 4rem;
+    }
+    &__title {
+      font-size: 3.2rem;
+      margin-bottom: 0.7rem;
+    }
+    &__text {
+      font-size: 1.8rem;
+    }
+    &__right {
+      width: 100%;
+    }
+  }
+}

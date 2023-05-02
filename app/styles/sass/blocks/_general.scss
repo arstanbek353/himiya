@@ -1,0 +1,128 @@
+// GENERAL PROJECT STYLES
+
+.section-title {
+  font-weight: 600;
+  color: #060606;
+  font-size: 4.6rem;
+  margin-bottom: 4.4rem;
+  @media (max-width: 48em) {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.only-pc {
+  display: block;
+  @media (max-width: 48em) {
+    display: none;
+  }
+}
+.only-sp {
+  display: none;
+  @media (max-width: 48em) {
+    display: block;
+  }
+}
+
+.brc {
+  margin-bottom: 2rem;
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0;
+    &::after {
+      padding: 0 1rem;
+      flex-shrink: 0;
+      content: '/';
+      display: inline-block;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 48em) {
+    &__link {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.btn {
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background-color: $accent;
+  border-radius: 0.7rem;
+  transition: opacity 200ms;
+  img {
+    flex-shrink: 0;
+    height: 1.5rem;
+    width: auto;
+  }
+  .before {
+    margin-right: 1rem;
+  }
+  &--white {
+    background-color: #fff;
+    color: $accent;
+    border: 1px solid $accent;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.gap-140 {
+  height: 14rem;
+  @media (max-width: 48em) {
+    height: 7rem;
+  }
+}
+
+.slider-prev,
+.slider-next {
+
+  display: inline-block;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slider-prev {
+  margin-right: 1.7rem;
+  background-image: url(../images/dist/slide-prev.svg);
+  &--dark {
+    background-image: url(../images/dist/slide-prev1.svg);
+  }
+}
+.slider-next {
+  background-image: url(../images/dist/slide-next.svg);
+  &--dark {
+    background-image: url(../images/dist/slide-next1.svg);
+  }
+}

@@ -1,0 +1,32 @@
+.main-prods {
+  margin-bottom: 17rem;
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+  &__mtitle {
+    margin-bottom: 0;
+  }
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    color: $accent;
+    font-weight: 600;
+    font-size: 1.8rem;
+    &::after {
+      margin-left: 3rem;
+      content: "";
+      display: inline-block;
+      width: 2.5rem;
+      height: 2rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/dist/arrow2.svg);
+    }
+  }
+  @media (max-width: 48em) {
+
+  }
+}

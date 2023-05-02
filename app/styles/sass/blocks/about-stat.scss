@@ -1,0 +1,91 @@
+.about-stat {
+  margin-bottom: 16rem;
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 3rem;
+  }
+  &__text {
+    font-size: 1.8rem;
+    line-height: 1.44;
+    color: #000000;
+  }
+  &__right {
+    width: 87rem;
+  }
+  &__left {
+    width: 67rem;
+    display: grid;
+    grid-gap: 5.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__n {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+  }
+  &__v {
+    font-size: 6.3rem;
+    line-height: 0.75;
+    color: #060606;
+  }
+  &__c {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    color: #060606;
+    padding-left: 1rem;
+  }
+  &__name {
+    font-size: 1.8rem;
+    color: #4A4A4A;
+  }
+  @media (max-width: 48em) {
+    margin-bottom: 7rem;
+    &__inner {
+      display: block;
+    }
+    &__left {
+      padding-right: 0;
+      margin-bottom: 4rem;
+    }
+    &__mtitle {
+      font-size: 3.2rem;
+      margin-bottom: 1.2rem;
+    }
+    &__text {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+    &__more {
+      width: 100%;
+      font-size: 1.4rem;
+      padding: 2rem 8rem;
+    }
+    &__right {
+      width: 100%;
+      grid-gap: 3rem 0;
+      margin-bottom: 4rem;
+    }
+    &__n {
+      margin-bottom: 1rem;
+    }
+    &__v {
+      font-size: 4.5rem;
+      line-height: 0.75;
+    }
+    &__p {
+      font-size: 1rem;
+      top: 0;
+      padding-left: 1rem;
+    }
+    &__c {
+      font-size: 1rem;
+      padding-left: 1rem;
+    }
+    &__name {
+      font-size: 1.4rem;
+    }
+
+  }
+}

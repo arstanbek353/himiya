@@ -1,0 +1,71 @@
+.contact {
+  margin-bottom: 14rem;
+  &__inner {
+    padding-top: 10rem;
+  }
+  &__head {
+    display: flex;
+    margin-bottom: 10rem;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #8E8E8E;
+    width: 39rem;
+  }
+  &__content {
+    width: 94.8rem;
+  }
+  &__top {
+    display: flex;
+    margin-bottom: 5rem;
+  }
+  &__left {
+    width: 60%;
+    a {
+      display: block;
+      font-weight: 500;
+      font-size: 2.8rem;
+      color: #000000;
+      margin-bottom: 2.8rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__right {
+    width: 40%;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 149.4%;
+    color: #000000;
+  }
+  &__btn {
+    width: 100%;
+    border-radius: 0;
+    height: 10rem;
+    padding: 2rem 4.8rem;
+    justify-content: space-between;
+    img {
+    }
+  }
+  &__map {
+    height: 64.7rem;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__poster {
+    height: 64.7rem;
+    display: none;
+    &.active {
+      display: block;
+    }
+    @include img-cover;
+  }
+}
+
+.contact-brc {
+  padding-top: 12.7rem;
+}

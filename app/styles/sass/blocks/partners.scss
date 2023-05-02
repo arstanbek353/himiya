@@ -1,0 +1,20 @@
+.partners {
+  margin-bottom: 17rem;
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+  }
+  &__slide {
+    width: 40.4rem;
+    margin-right: 2.5rem;
+    background: #FFFFFF;
+    border-radius: 2rem;
+    overflow: hidden;
+    @include img-contain;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

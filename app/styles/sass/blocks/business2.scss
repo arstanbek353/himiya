@@ -1,0 +1,34 @@
+.business2 {
+  margin-bottom: 14rem;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6rem;
+  }
+  &__text {
+    width: 87.2rem;
+    font-size: 1.8rem;
+    line-height: 144.4%;
+  }
+  &__stat {
+    display: flex;
+  }
+  &__stat-item {
+    padding: 5.7rem;
+    border-right: 1.5px solid #E0E0E0;
+    &:last-child {
+      border: none;
+    }
+    p {
+      font-weight: 500;
+      font-size: 4rem;
+      color: #060606;
+      margin-bottom: 1.8rem;
+    }
+    span {
+      font-size: 1.8rem;
+      color: #4A4A4A;
+    }
+  }
+}

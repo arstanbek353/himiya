@@ -1,0 +1,43 @@
+<div class="contact-form">
+  <div class="container">
+    <div class="contact-form__inner">
+      <div class="contact-form__left">
+        <div class="contact-form__title">Запрос прайс-листа</div>
+        <div class="contact-form__text">Вы можете использовать форму для своих <br> предложений или вопросов. Так вы <br> поможете нам стать ещё лучше!</div>
+      </div>
+      <div class="contact-form__right">
+        <form class="form js-contact-form">
+          <div class="form__inner">
+            <div class="form__item form__item--50">
+              <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+            </div>
+            <div class="form__item form__item--50">
+              <input type="email" name="email" class="form__input" placeholder="Почта" required>
+            </div>
+            <div class="form__item form__item--50">
+              <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
+            </div>
+            <div class="form__item form__item--50">
+              <select name="products" id="" class="form__select">
+                <option value="Products">Цель обращения</option>
+              </select>
+            </div>
+            <div class="form__item form__item--100">
+              <textarea name="comment" class="form__textarea" placeholder="Ваше сообщение" required maxlength="500"></textarea>
+            </div>
+          </div>
+          <div class="form__actions">
+            <div class="form__conf">
+              <label class="form__conf-label">
+                <input type="checkbox" class="visually-hidden" required>
+                <span></span>
+              </label>
+              <div class="form__conf-text">Отправляя форму, вы соглашаетесь <br> с политикой конфиденциальности</div>
+            </div>
+            <button class="btn form__send js-contact-btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
