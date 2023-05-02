@@ -2,440 +2,246 @@
 <html>
 
 <head>
-
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-
-	<title>ICAPIA</title>
-	<meta name="description" content="ICAPIA">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-	<link rel="icon" href="images/favicon.png">
-	<!-- <meta property="og:image" content="images/dist/preview.jpg"> -->
-	
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
-	<link rel="stylesheet" href="css/app.min.css">
-  <script>
-    window.locationGroups = [
-      {
-        center: { lat: 38.904625, lng: -77.036213 },
-        label: "Washington",
-        locations: [
-          {position: { lat: 38.985791, lng: -77.124791 }, label: "a"},
-          {position: { lat: 38.777338, lng: -77.143330 },label: "b"},
-          {position: { lat: 38.859192, lng: -76.779408 },label: "c"},
-        ]
-      },
-      {
-        center: { lat: 40.676190, lng: -74.008581 },
-        label: "New York",
-        locations: [
-          {position: { lat: 40.701833, lng: -74.171354 }, label: "d"},
-          {position: { lat: 40.709473, lng: -74.092178 },label: "e"},
-          {position: { lat: 40.626140, lng: -74.132374 },label: "f"},
-        ]
-      }
-    ]
-  </script>
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+  <title>ICAPIA</title>
+  <meta name="description" content="ICAPIA">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="images/favicon.png">
+  <!-- <meta property="og:image" content="images/dist/preview.jpg"> -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/app.min.css">
   <script src="https://unpkg.com/@googlemaps/markerclusterer@2.0.15/dist/index.min.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script type="module" src="js/map.js"></script>
   <script src="js/jquery-3.6.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/ion.rangeSlider.min.js"></script>
-
 </head>
 
 <body>
   <div class="root">
-    <header class="header">
+    <header class="header light">
       <div class="container">
         <div class="header__inner">
           <a href="/" class="header__logo">
-            <img src="images/dist/logo.svg" alt="logo">
+            <img src="images/dist/logo.svg" class="light" alt="logo">
+            <img src="images/dist/logo-black.svg" class="dark" alt="logo">
           </a>
           <nav class="header__nav">
             <div class="header__nav-title">Menu</div>
             <div class="header__nav-list">
-              <a href="/product.html" class="header__links">Products for home</a>
-              <a href="/business.html" class="header__links">Products for business</a>
-              <a href="/resources.html" class="header__links">Resources</a>
-              <a href="/company.html" class="header__links">Company</a>
+              <a href="/" class="header__links">О компании</a>
+              <a href="/" class="header__links">Каталоги</a>
+              <a href="/" class="header__links">Новости</a>
+              <a href="/" class="header__links">Контакты</a>
             </div>
           </nav>
-          <div class="header__controlls">
-            <div class="search">
-              <button class="search__open">
-                <img src="images/dist/search.svg" alt="">
-              </button>
-              <div class="search__inner">
-                <div class="search__label">
-                  <input type="text" class="search__input" placeholder="Search...">
-                  <button class="search__close">
-                    <img src="images/dist/modal-close.svg" alt="">
-                  </button>
-                </div>
-                <div class="search__drop">
-                  <div class="search__list">
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                  </div>
-                  <a href="/" class="search__all">See all products</a>
-                </div>
-              </div>
-            </div>
-            <a href="/" class="header__cart">
-              <img src="images/dist/cart.svg" alt="">
-            </a>
-            <a href="/" class="header__login">LOGIN</a>
-            <button class="header__burger">
-              <img class="burger" src="images/dist/burger.svg" alt="">
-              <img class="close" src="images/dist/modal-close.svg" alt="">
-            </button>
+          <div class="header__contacts">
+            <a href="tomail:info@example.ru" class="header__contact">info@example.ru</a>
+            <a href="tel:+7 (495) 555 32 54" class="header__contact">+7 (495) 555 32 54</a>
+            <button class="btn header__req" data-class="contact">Оставить заявку</button>
           </div>
+          <button class="header__burger">
+            <img class="burger" src="images/dist/burger.svg" alt="">
+            <img class="close" src="images/dist/modal-close.svg" alt="">
+          </button>
         </div>
       </div>
     </header>
-  <div class="catalog-wrapper">
-    <div class="container">
-      <div class="catalog-wrapper__head">
-        <div class="catalog-head">
-  <div class="brc">
-    <a href="/" class="brc__link">Home</a>
-    <a href="/" class="brc__link active">Products for home</a>
+
+<div class="catalog-banner">
+  <div class="catalog-banner__bg">
+    <img src="/images/dist/catalog-banner.jpg" alt="">
   </div>
-  <div class="catalog-head__title">Products for business</div>
-  <form class="catalog-head__sort">
-    <label class="catalog-head__label">
-      <input type="radio" name="sort" value="sort_1" class="catalog-head__input" hidden checked>
-      <span class="catalog-head__label-text">New</span>
-    </label>
-    <label class="catalog-head__label">
-      <input type="radio" name="sort" value="sort_2" class="catalog-head__input" hidden>
-      <span class="catalog-head__label-text">Popular</span>
-    </label>
-    <label class="catalog-head__label">
-      <input type="radio" name="sort" value="sort_3" class="catalog-head__input" hidden>
-      <span class="catalog-head__label-text">CHADEMO</span>
-    </label>
-    <label class="catalog-head__label">
-      <input type="radio" name="sort" value="sort_4" class="catalog-head__input" hidden>
-      <span class="catalog-head__label-text">Type2</span>
-    </label>
-    <label class="catalog-head__label">
-      <input type="radio" name="sort" value="sort_5" class="catalog-head__input" hidden>
-      <span class="catalog-head__label-text">CCS2 (Combo2)</span>
-    </label>
-    <label class="catalog-head__label">
-      <input type="radio" name="sort" value="sort_6" class="catalog-head__input" hidden>
-      <span class="catalog-head__label-text">In-Body Holster</span>
-    </label>
-    <label class="catalog-head__label">
-      <input type="radio" name="sort" value="sort_7" class="catalog-head__input" hidden>
-      <span class="catalog-head__label-text">Separate Holster</span>
-    </label>
-  </form>
-</div>
+  <div class="container">
+    <div class="catalog-banner__inner">
+      <div class="brc">
+        <a href="/" class="brc__link">Главная</a>
+        <a href="/" class="brc__link">Каталоги</a>
       </div>
+      <div class="catalog-banner__title">Каталог</div>
+      <div class="catalog-banner__text">Являясь одной из самых распространённых в мире сельскохозяйственных культур, рис занимает главенствующую позицию в национальной кухне сотен народов. В России до XIX века рис называли «сарацинское зерно». </div>
+    </div>
+  </div>
+</div>
+  <div class="catalog-wrapper">
+    <div class="catalog-wrapper__head">
+      <div class="catalog-head">
+  <div class="container">
+    <div class="catalog-head__sort">
+      <a href="/?sort=1" class="catalog-head__item active">Все товары</a>
+      <a href="/?sort=2" class="catalog-head__item">Бытовая химия</a>
+      <a href="/?sort=3" class="catalog-head__item">Детская гигиена</a>
+      <a href="/?sort=4" class="catalog-head__item">Средства гигиены</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="container">
       <div class="catalog-wrapper__inner">
         <div class="catalog-wrapper__aside">
           <div class="catalog-filter">
   <button class="catalog-filter__open" type="button">
     <img src="images/dist/filter.svg" alt="">
-    Filters
+    Бренды
   </button>
   <form class="catalog-filter__content">
     <div class="catalog-filter__head">
-      Filters
+      Бренды
       <button class="catalog-filter__close" type="button">
         <img src="images/dist/x-btn.svg" class="only-sp" alt="">
       </button>
     </div>
     <div class="catalog-filter__list">
-      <div class="catalog-filter__item">
-        <div class="catalog-filter__title">Price</div>
-        <div class="catalog-filter__range">
-          <input 
-            type="text" 
-            class="js-range-slider" 
-            name="my_range_id" 
-            id="my_range_id" 
-            value=""
-            data-type="double"
-            data-min="0"
-            data-max="19000"
-            data-from="0"
-            data-to="10000"
-            data-hide-min-max="true"
-            data-hide-from-to="true"
-            data-input-values-separator="_"
-          />
-          <div class="catalog-filter__range-inputs">
-            <input type="number" 
-              value="0"
-              class="catalog-filter__range-input catalog-filter__range-input--from">
-            <span></span>
-            <input type="number" 
-              value="10000"
-              class="catalog-filter__range-input catalog-filter__range-input--to">
-          </div>
-        </div>
-      </div>
-      <div class="catalog-filter__item">
-        <div class="catalog-filter__title">Power</div>
-        <div class="catalog-filter__checkboxes">
-          <label class="catalog-filter__label">
-            <input type="checkbox" name="name_1" class="catalog-filter__radiocheck" hidden>
-            <span class="catalog-filter__check"></span>
-            <span class="catalog-filter__input-name">7 kW</span>
-          </label>
-          <label class="catalog-filter__label">
-            <input type="checkbox" name="name_2" class="catalog-filter__radiocheck" hidden>
-            <span class="catalog-filter__check"></span>
-            <span class="catalog-filter__input-name">11 kW</span>
-          </label>
-          <label class="catalog-filter__label">
-            <input type="checkbox" name="name_3" class="catalog-filter__radiocheck" hidden>
-            <span class="catalog-filter__check"></span>
-            <span class="catalog-filter__input-name">20 kW</span>
-          </label>
-          <label class="catalog-filter__label">
-            <input type="checkbox" name="name_4" class="catalog-filter__radiocheck" hidden>
-            <span class="catalog-filter__check"></span>
-            <span class="catalog-filter__input-name">40 kW</span>
-          </label>
-        </div>
-      </div>
-      <div class="catalog-filter__item">
-        <div class="catalog-filter__title">Connector</div>
-        <div class="catalog-filter__radios">
-          <label class="catalog-filter__label">
-            <input type="radio" name="radio_name" value="radio_1" class="catalog-filter__radiocheck" hidden>
-            <span class="catalog-filter__check"></span>
-            <span class="catalog-filter__input-name">CHADEMO</span>
-          </label>
-          <label class="catalog-filter__label">
-            <input type="radio" name="radio_name" value="radio_2" class="catalog-filter__radiocheck" hidden>
-            <span class="catalog-filter__check"></span>
-            <span class="catalog-filter__input-name">CCS Combo 2</span>
-          </label>
-          <label class="catalog-filter__label">
-            <input type="radio" name="radio_name" value="radio_3" class="catalog-filter__radiocheck" hidden>
-            <span class="catalog-filter__check"></span>
-            <span class="catalog-filter__input-name">GB/T</span>
-          </label>
-          <label class="catalog-filter__label">
-            <input type="radio" name="radio_name" value="radio_4" class="catalog-filter__radiocheck" hidden>
-            <span class="catalog-filter__check"></span>
-            <span class="catalog-filter__input-name">TYPE 2</span>
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="catalog-filter__actions">
-      <button class="catalog-filter__reset" type="button">
-        <img src="images/dist/x-btn.svg" alt="">
-        Clear
-      </button>
-      <button class="btn catalog-filter__apply" type="button">
-        <img src="images/dist/check.svg" class="before" alt="">
-        Apply filters
-      </button>
+      <a href="?brand=1" class="catalog-filter__item">Unirex</a>
+      <a href="?brand=1" class="catalog-filter__item">Escabel</a>
+      <a href="?brand=1" class="catalog-filter__item">Kirbiyik</a>
+      <a href="?brand=1" class="catalog-filter__item">Unirex</a>
+      <a href="?brand=1" class="catalog-filter__item">Escabel</a>
+      <a href="?brand=1" class="catalog-filter__item">Kirbiyik</a>
+      <a href="?brand=1" class="catalog-filter__item">Unirex</a>
+      <a href="?brand=1" class="catalog-filter__item">Escabel</a>
+      <a href="?brand=1" class="catalog-filter__item">Kirbiyik</a>
+      <a href="?brand=1" class="catalog-filter__item">Unirex</a>
+      <a href="?brand=1" class="catalog-filter__item">Escabel</a>
+      <a href="?brand=1" class="catalog-filter__item">Kirbiyik</a>
+      <a href="?brand=1" class="catalog-filter__item">Unirex</a>
+      <a href="?brand=1" class="catalog-filter__item">Escabel</a>
+      <a href="?brand=1" class="catalog-filter__item">Kirbiyik</a>
+      <a href="?brand=1" class="catalog-filter__item">Unirex</a>
+      <a href="?brand=1" class="catalog-filter__item">Escabel</a>
+      <a href="?brand=1" class="catalog-filter__item">Kirbiyik</a>
     </div>
   </form>
 </div>
         </div>
         <div class="catalog-wrapper__content js-catalog-content">
-          <div class="catalog-home-wrapper">
-  <div class="catalog-home">
-    <a href="/" class="catalog-home__link"></a>
-    <div class="catalog-home__img">
-      <img src="images/dist/catalog-item.png" alt="">
+          <div class="catalog-wrapper__t">Бытовая химия</div>
+          <div class="catalog">
+  <a href="" class="catalog__item">
+    <div class="catalog__img">
+      <img src="images/dist/item1.png" alt="">
     </div>
-    <div class="catalog-home__content">
+    <div class="catalog__content">
       <div>
-        <div class="catalog-home__title">MaxiCharger Commercial</div>
-        <div class="catalog-home__description">Our residential, commercial and fast charging stations are widely
-          compatible, built on open standards, and designed to be accessible for everyone.</div>
-        <div class="catalog-home__footer">
-          <div class="catalog-home__icons">
-            <div class="catalog-home__icon">
-              <img src="images/dist/conector.svg" alt=""> GB/T
-            </div>
-            <div class="catalog-home__icon">
-              <img src="images/dist/chademo.svg" alt=""> CHADEMO
-            </div>
-          </div>
-          <div class="catalog-home__price">2 000 $</div>
+        <div class="catalog__title">UNIREX</div>
+        <div class="catalog__description">Чистящее средство для
+          ванны и раковины</div>
+        <div class="catalog__footer">
+          <div class="catalog__art">Артикул: 992887</div>
+          <div class="catalog__arrow"></div>
         </div>
       </div>
-      <button class="btn catalog-home__add" type="button" data-item-id="1">Add to cart</button>
+    </div>
+  </a>
+  <a href="" class="catalog__item">
+    <div class="catalog__img">
+      <img src="images/dist/item2.png" alt="">
+    </div>
+    <div class="catalog__content">
+      <div>
+        <div class="catalog__title">UNIREX</div>
+        <div class="catalog__description">Чистящее средство для
+          ванны и раковины</div>
+        <div class="catalog__footer">
+          <div class="catalog__art">Артикул: 992887</div>
+          <div class="catalog__arrow"></div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="" class="catalog__item">
+    <div class="catalog__img">
+      <img src="images/dist/item1.png" alt="">
+    </div>
+    <div class="catalog__content">
+      <div>
+        <div class="catalog__title">UNIREX</div>
+        <div class="catalog__description">Чистящее средство для
+          ванны и раковины</div>
+        <div class="catalog__footer">
+          <div class="catalog__art">Артикул: 992887</div>
+          <div class="catalog__arrow"></div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="" class="catalog__item">
+    <div class="catalog__img">
+      <img src="images/dist/item2.png" alt="">
+    </div>
+    <div class="catalog__content">
+      <div>
+        <div class="catalog__title">UNIREX</div>
+        <div class="catalog__description">Чистящее средство для
+          ванны и раковины</div>
+        <div class="catalog__footer">
+          <div class="catalog__art">Артикул: 992887</div>
+          <div class="catalog__arrow"></div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+          <a href="?limit=40" class="catalog-wrapper__more">Показать ещё</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="catalog-home">
-    <a href="/" class="catalog-home__link"></a>
-    <div class="catalog-home__img">
-      <img src="images/dist/catalog-item.png" alt="">
+  <div class="business">
+  <div class="business__inner">
+    <div class="business__img">
+      <img src="/images/dist/business.jpg" alt="">
     </div>
-    <div class="catalog-home__content">
-      <div>
-        <div class="catalog-home__title">MaxiCharger Commercial</div>
-        <div class="catalog-home__description">Our residential, comor everyone.</div>
-        <div class="catalog-home__footer">
-          <div class="catalog-home__icons">
-            <div class="catalog-home__icon">
-              <img src="images/dist/conector.svg" alt=""> GB/T
-            </div>
-            <div class="catalog-home__icon">
-              <img src="images/dist/chademo.svg" alt=""> CHADEMO
-            </div>
-          </div>
-          <div class="catalog-home__price">2 000 $</div>
-        </div>
+    <div class="business__content">
+      <div class="section-title">Чем мы занимаемся</div>
+      <div class="business__text">
+        Являясь одной из самых распространённых в мире сельскохозяйственных культур, рис занимает главенствующую позицию в национальной кухне сотен народов. В России до XIX века рис называли «сарацинское зерно». Более половины населения Земли питаются в основном именно рисом, что делает эту сельскохозяйственную культуру важнейшей на планете. В некоторых странах Азии из этого растения готовят такие напитки, как вино и пиво. Из рисовых зерён делают так называемую съедобную рисовую бумагу, применяемую в кондитерском деле.
+        <br><br>
+        Здоровый праздничный ужин вовсе не обязательно должен состоять из шпината, гречки и вареной куриной грудки. Самыми лучшими способами приготовления еды являются следующие: варка на пару, запекание или варка в воде.
       </div>
-      <button class="btn catalog-home__add" type="button" data-item-id="2" disabled>Item in cart</button>
+      <button class="btn">Связаться</button>
     </div>
   </div>
 </div>
-          <ul class="pagination">
-  <li class="pagination__item">
-    <button class="pagination__btn pagination__btn--prev" data-page="1">«</button>
-  </li>
-  <li class="pagination__item">
-    <button class="pagination__link active" data-page="1">1</button>
-  </li>
-  <li class="pagination__item">
-    <button class="pagination__link" data-page="2">2</button>
-  </li>
-  <li class="pagination__item">
-    <button class="pagination__link" data-page="3">3</button>
-  </li>
-  <li class="pagination__item">
-    <button class="pagination__btn pagination__btn--next" data-page="2">»</button>
-  </li>
-</ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__left">
             <a href="/" class="footer__logo">
-              <img src="images/dist/footer-logo.svg" alt="">
+              <img src="images/dist/logo-black.svg" alt="">
             </a>
-            <div class="footer__desk">
-              <a href="/" class="footer__tel">8 800 123 45 67</a>
-              <a href="" class="footer__email">info@icapia.com</a>
-              <div class="footer__socs">
-                <a href="/" class="footer__soc">
-                  <img src="images/dist/instagram.svg" alt="">
-                </a>
-              </div>
+          </div>
+          <div class="footer__center">
+            <div class="footer__item">
+              <div class="footer__title">309556, Новосибирская <br> область, город Серебряные <br> Пруды, пер. Ломоносова, 13</div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">info@example.ru</div>
             </div>
           </div>
           <div class="footer__right">
-            <div class="footer__list">
-              <div class="footer__item">
-                <div class="footer__title">Products</div>
-                <div class="footer__links">
-                  <a href="/" class="footer__link">Products for home</a>
-                  <a href="/" class="footer__link">Products for business</a>
-                  <a href="/" class="footer__link">Resources</a>
-                  <a href="/" class="footer__link">Ecology</a>
-                </div>
-              </div>
-              <div class="footer__item">
-                <div class="footer__title">ABOUT</div>
-                <div class="footer__links">
-                  <a href="/" class="footer__link">About Us</a>
-                  <a href="/" class="footer__link">Contact Us</a>
-                  <a href="/" class="footer__link">Team</a>
-                  <a href="/" class="footer__link">Jobs</a>
-                </div>
-              </div>
-              <div class="footer__item">
-                <div class="footer__title">INFO</div>
-                <div class="footer__links">
-                  <a href="/" class="footer__link">Support</a>
-                  <a href="/" class="footer__link">Terms of Service</a>
-                  <a href="/" class="footer__link">Cookies</a>
-                  <a href="/" class="footer__link">Privacy Police</a>
-                </div>
-              </div>
+            <div class="footer__item">
+              <div class="footer__title">+7 (495) 555 32 54</div>
+              <div class="footer__subtitle">Приемная</div>
             </div>
-            <div class="footer__app">
-              <div class="footer__app-title">Download app</div>
-              <div class="footer__apps">
-                <a href="/" class="footer__app-link">
-                  <img src="images/dist/app-store.svg" alt="">
-                </a>
-                <a href="/" class="footer__app-link">
-                  <img src="images/dist/play-market.svg" alt="">
-                </a>
-              </div>
+            <div class="footer__item">
+              <div class="footer__title">+7 (495) 555 32 54</div>
+              <div class="footer__subtitle">Приемная</div>
             </div>
-            <div class="footer__mob">
-              <a href="/" class="footer__tel">8 800 123 45 67</a>
-              <a href="" class="footer__email">info@icapia.com</a>
-              <div class="footer__socs">
-                <a href="/" class="footer__soc">
-                  <img src="images/dist/instagram.svg" alt="">
-                </a>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__left">
+            <div class="footer__bot">Все права защищены</div>
+          </div>
+          <div class="footer__center">
+            <div class="footer__bot">Политика конфиденциальности</div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__bot">Cookies</div>
           </div>
         </div>
       </div>
@@ -450,85 +256,8 @@
         <div class="accepted__icon">
           <img src="images/dist/accepted.svg" alt="">
         </div>
-        <div class="accepted__title">Your application has<br class="only-sp"> been accepted,<br class="only-pc"> we will<br class="only-sp"> contact you soon</div>
-        <div class="accepted__text">Pending a response, you can view <br> <a href="/">other products</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="modal close-x" data-modal="review-accepted">
-  <div class="modal__inner">
-    <button class="modal__close close-x" type="button">
-      <img class="close-x" src="images/dist/modal-close.svg" alt="">
-    </button>
-    <div class="modal__content">
-      <div class="accepted">
-        <div class="accepted__icon">
-          <img src="images/dist/accepted.svg" alt="">
-        </div>
-        <div class="accepted__title">Thank you for contact!</div>
-        <div class="accepted__text">Your review has been received and will be published soon.</div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="modal close-x" data-modal="cart-added">
-  <div class="modal__inner">
-    <button class="modal__close close-x" type="button">
-      <img class="close-x" src="images/dist/modal-close.svg" alt="">
-    </button>
-    <div class="modal__content">
-      <div class="accepted">
-        <div class="accepted__icon">
-          <img src="images/dist/accepted.svg" alt="">
-        </div>
-        <div class="accepted__title">Product moved to cart!</div>
-        <div class="accepted__text">Go to the <a href="/">shopping cart</a> to order or <br> view other products.</div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="modal close-x" data-modal="review">
-  <div class="modal__inner">
-    <button class="modal__close close-x" type="button">
-      <img class="close-x" src="images/dist/modal-close.svg" alt="">
-    </button>
-    <div class="modal__content">
-      <div class="review-form">
-        <div class="review-form__inner">
-          <div class="review-form__left">
-            <div class="review-form__title">Write a review</div>
-            <div class="review-form__text"> You can leave a contact so <br> we can improve our products </div>
-          </div>
-          <div class="review-form__right">
-            <form class="form js-review-form">
-              <div class="form__inner">
-                <div class="form__item">
-                  <input type="text" name="name" class="form__input" placeholder="Your name" required>
-                </div>
-                <div class="form__item form__item--100">
-                  <textarea name="comment" class="form__textarea form__textarea--big" placeholder="Your message" required
-                    maxlength="500"></textarea>
-                </div>
-              </div>
-              <div class="form__actions form__actions--review">
-                <div class="stars">
-                  <input type="radio" name="stars" value="star_5" id="star_5" class="visually-hidden" required>
-                  <label for="star_5"></label>
-                  <input type="radio" name="stars" value="star_4" id="star_4" class="visually-hidden" required>
-                  <label for="star_4"></label>
-                  <input type="radio" name="stars" value="star_3" id="star_3" class="visually-hidden" required>
-                  <label for="star_3"></label>
-                  <input type="radio" name="stars" value="star_2" id="star_2" class="visually-hidden" required>
-                  <label for="star_2"></label>
-                  <input type="radio" name="stars" value="star_1" id="star_1" class="visually-hidden" required>
-                  <label for="star_1"></label>
-                </div>
-                <button class="btn form__send  js-review-btn">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
+        <div class="accepted__title">Зарос отправлен</div>
+        <div class="accepted__text">Пока вы можете посмотреть <br> <a href="/">другие товары</a></div>
       </div>
     </div>
   </div>
@@ -539,88 +268,43 @@
       <img class="close-x" src="images/dist/modal-close.svg" alt="">
     </button>
     <div class="modal__content">
-      <div class="contact-form">
-  <div class="container">
-    <div class="contact-form__inner">
-      <div class="contact-form__left">
-        <div class="contact-form__title">Contact us</div>
-        <div class="contact-form__text">
-          Use the form or email us 
-          <br>
-          <a href="mailto:ranjiticapia@icapia.com">ranjiticapia@icapia.com</a>
+      <div class="contact-form2">
+  <div class="contact-form2__inner">
+    <div class="contact-form2__title">Запрос прайс-листа</div>
+    <div class="contact-form2__text">Вы можете использовать форму для своих <br> предложений или вопросов. Так вы <br>
+      поможете нам стать ещё лучше!</div>
+    <form class="form form--modal js-contact-form2">
+      <div class="form__inner">
+        <div class="form__item form__item--33">
+          <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+        </div>
+        <div class="form__item form__item--33">
+          <input type="email" name="email" class="form__input" placeholder="Почта" required>
+        </div>
+        <div class="form__item form__item--33">
+          <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
+        </div>
+        <div class="form__item form__item--100">
+          <select name="products" id="" class="form__select">
+            <option value="Products">Цель обращения</option>
+          </select>
+        </div>
+        <div class="form__item form__item--100">
+          <textarea name="comment" class="form__textarea" placeholder="Ваше сообщение" required
+            maxlength="500"></textarea>
         </div>
       </div>
-      <div class="contact-form__right">
-        <form class="form js-contact-form">
-          <div class="form__inner">
-            <div class="form__item form__item--50">
-              <input type="text" name="name" class="form__input" placeholder="Your name" required>
-            </div>
-            <div class="form__item form__item--50">
-              <input type="email" name="email" class="form__input" placeholder="Email" required>
-            </div>
-            <div class="form__item form__item--50">
-              <input type="tel" name="tel" class="form__input" placeholder="Phone" required>
-            </div>
-            <div class="form__item form__item--50">
-              <select name="products" id="" class="form__select">
-                <option value="Products">Products</option>
-              </select>
-            </div>
-            <div class="form__item form__item--100">
-              <textarea name="comment" class="form__textarea" placeholder="Your message" required maxlength="500"></textarea>
-            </div>
-          </div>
-          <div class="form__actions">
-            <button class="btn form__send js-contact-btn">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-    <div class="modal close-x" data-modal="order">
-  <div class="modal__inner">
-    <button class="modal__close close-x" type="button">
-      <img class="close-x" src="images/dist/modal-close.svg" alt="">
-    </button>
-    <div class="modal__content">
-      <div class="contact-form">
-  <div class="container">
-    <div class="contact-form__inner">
-      <div class="contact-form__left">
-        <div class="contact-form__title">Order</div>
-        <div class="contact-form__text">
-          Use the form or email us 
-          <br>
-          <a href="mailto:ranjiticapia@icapia.com">ranjiticapia@icapia.com</a>
+      <div class="form__actions form__actions--modal">
+        <button class="btn form__send js-contact-btn">Отправить</button>
+        <div class="form__conf">
+          <label class="form__conf-label">
+            <input type="checkbox" class="visually-hidden" required>
+            <span></span>
+          </label>
+          <div class="form__conf-text">Отправляя форму, вы соглашаетесь <br> с политикой конфиденциальности</div>
         </div>
       </div>
-      <div class="contact-form__right">
-        <form class="form js-form-order">
-          <div class="form__inner">
-            <div class="form__item form__item--100">
-              <input type="text" name="name" class="form__input" placeholder="Your name" required>
-            </div>
-            <div class="form__item form__item--50">
-              <input type="email" name="email" class="form__input" placeholder="Email" required>
-            </div>
-            <div class="form__item form__item--50">
-              <input type="tel" name="tel" class="form__input" placeholder="Phone" required>
-            </div>
-            <div class="form__item form__item--100">
-              <textarea name="comment" class="form__textarea" placeholder="Your message" required maxlength="500"></textarea>
-            </div>
-          </div>
-          <div class="form__actions">
-            <button class="btn form__send js-order">Order</button>
-          </div>
-        </form>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
     </div>
@@ -628,7 +312,7 @@
 </div>
   </div>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMF4zbNZ3i17RD5OkkD5H75ePPcio1Adg&callback=initMap&v=weekly"
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"
     defer
   ></script>
   <script src="js/app.min.js"></script>

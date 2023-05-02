@@ -2,600 +2,442 @@
 <html>
 
 <head>
-
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-
-	<title>ICAPIA</title>
-	<meta name="description" content="ICAPIA">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-	<link rel="icon" href="images/favicon.png">
-	<!-- <meta property="og:image" content="images/dist/preview.jpg"> -->
-	
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
-	<link rel="stylesheet" href="css/app.min.css">
-  <script>
-    window.locationGroups = [
-      {
-        center: { lat: 38.904625, lng: -77.036213 },
-        label: "Washington",
-        locations: [
-          {position: { lat: 38.985791, lng: -77.124791 }, label: "a"},
-          {position: { lat: 38.777338, lng: -77.143330 },label: "b"},
-          {position: { lat: 38.859192, lng: -76.779408 },label: "c"},
-        ]
-      },
-      {
-        center: { lat: 40.676190, lng: -74.008581 },
-        label: "New York",
-        locations: [
-          {position: { lat: 40.701833, lng: -74.171354 }, label: "d"},
-          {position: { lat: 40.709473, lng: -74.092178 },label: "e"},
-          {position: { lat: 40.626140, lng: -74.132374 },label: "f"},
-        ]
-      }
-    ]
-  </script>
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+  <title>ICAPIA</title>
+  <meta name="description" content="ICAPIA">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="images/favicon.png">
+  <!-- <meta property="og:image" content="images/dist/preview.jpg"> -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/app.min.css">
   <script src="https://unpkg.com/@googlemaps/markerclusterer@2.0.15/dist/index.min.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script type="module" src="js/map.js"></script>
   <script src="js/jquery-3.6.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/ion.rangeSlider.min.js"></script>
-
 </head>
 
 <body>
   <div class="root">
-    <header class="header">
+    <header class="header light">
       <div class="container">
         <div class="header__inner">
           <a href="/" class="header__logo">
-            <img src="images/dist/logo.svg" alt="logo">
+            <img src="images/dist/logo.svg" class="light" alt="logo">
+            <img src="images/dist/logo-black.svg" class="dark" alt="logo">
           </a>
           <nav class="header__nav">
             <div class="header__nav-title">Menu</div>
             <div class="header__nav-list">
-              <a href="/product.html" class="header__links">Products for home</a>
-              <a href="/business.html" class="header__links">Products for business</a>
-              <a href="/resources.html" class="header__links">Resources</a>
-              <a href="/company.html" class="header__links">Company</a>
+              <a href="/" class="header__links">О компании</a>
+              <a href="/" class="header__links">Каталоги</a>
+              <a href="/" class="header__links">Новости</a>
+              <a href="/" class="header__links">Контакты</a>
             </div>
           </nav>
-          <div class="header__controlls">
-            <div class="search">
-              <button class="search__open">
-                <img src="images/dist/search.svg" alt="">
-              </button>
-              <div class="search__inner">
-                <div class="search__label">
-                  <input type="text" class="search__input" placeholder="Search...">
-                  <button class="search__close">
-                    <img src="images/dist/modal-close.svg" alt="">
-                  </button>
-                </div>
-                <div class="search__drop">
-                  <div class="search__list">
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                    <a href="/" class="search__item">
-                      <div class="search__img">
-                        <img src="images/dist/cart-item.png" alt="">
-                      </div>
-                      <div class="search__content">
-                        <div class="search__brand">AUTEL</div>
-                        <div class="search__name">MaxiCharger Commercial</div>
-                        <div class="search__price">2190$</div>
-                      </div>
-                    </a>
-                  </div>
-                  <a href="/" class="search__all">See all products</a>
-                </div>
-              </div>
-            </div>
-            <a href="/" class="header__cart">
-              <img src="images/dist/cart.svg" alt="">
-            </a>
-            <a href="/" class="header__login">LOGIN</a>
-            <button class="header__burger">
-              <img class="burger" src="images/dist/burger.svg" alt="">
-              <img class="close" src="images/dist/modal-close.svg" alt="">
-            </button>
+          <div class="header__contacts">
+            <a href="tomail:info@example.ru" class="header__contact">info@example.ru</a>
+            <a href="tel:+7 (495) 555 32 54" class="header__contact">+7 (495) 555 32 54</a>
+            <button class="btn header__req" data-class="contact">Оставить заявку</button>
           </div>
+          <button class="header__burger">
+            <img class="burger" src="images/dist/burger.svg" alt="">
+            <img class="close" src="images/dist/modal-close.svg" alt="">
+          </button>
         </div>
       </div>
     </header>
 
   <section class="main-slider">
-  <div class="container">
-    <div class="main-slider__inner">
-      <div class="swiper-container main-slider__slider">
-        <div class="swiper-wrapper main-slider__wrapper">
-          <div class="swiper-slide main-slider__slide">
-            <div class="main-slider__img">
-              <img src="images/dist/main-slider-1.jpg" alt="">
-            </div>
-            <div class="main-slider__content">
-              <div class="main-slider__left">
-                <div class="main-slider__name">Products for home</div>
-                <div class="main-slider__title">Unique Solutions  <br>
-                  For Charging Stations</div>
-                <div class="main-slider__description">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone</div>
-                <a href="/" class="main-slider__link">Products</a>
-              </div>
-              <div class="main-slider__right">
-                <div class="main-prods__slide active">
-                  <div class="main-prods__img">
-                    <img src="images/dist/main-prods-5.jpg" alt="">
-                  </div>
-                  <div class="main-prods__content">
-                    <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-                    <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-                    <div class="main-prods__chars">
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                      </div>
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                      </div>
-                    </div>
-                    <div class="main-prods__icons">
-                      <div class="main-prods__icon">
-                        <img src="images/dist/conector.svg" alt="">
-                        <div class="main-prods__icon-em">GB/T</div>
-                      </div>
-                      <div class="main-prods__icon">
-                        <img src="images/dist/chademo.svg" alt="">
-                        <div class="main-prods__icon-em">CHADEMO</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="main-prods__slide active">
-                  <div class="main-prods__img">
-                    <img src="images/dist/main-prods-6.jpg" alt="">
-                  </div>
-                  <div class="main-prods__content">
-                    <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-                    <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-                    <div class="main-prods__chars">
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                      </div>
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                      </div>
-                    </div>
-                    <div class="main-prods__icons">
-                      <div class="main-prods__icon">
-                        <img src="images/dist/conector.svg" alt="">
-                        <div class="main-prods__icon-em">GB/T</div>
-                      </div>
-                      <div class="main-prods__icon">
-                        <img src="images/dist/chademo.svg" alt="">
-                        <div class="main-prods__icon-em">CHADEMO</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="main-slider__inner">
+    <div class="swiper-container main-slider__slider">
+      <div class="swiper-wrapper main-slider__wrapper">
+        <div class="swiper-slide main-slider__slide">
+          <div class="main-slider__img">
+            <img src="images/dist/main-slider-1.jpg" alt="">
           </div>
-          <div class="swiper-slide main-slider__slide">
-            <div class="main-slider__img">
-              <img src="images/dist/main-slider-2.jpg" alt="">
-            </div>
+          <div class="container">
             <div class="main-slider__content">
               <div class="main-slider__left">
-                <div class="main-slider__name">Custom Name</div>
-                <div class="main-slider__title">Unique Solutions <br>
-                  For HOME USE</div>
-                <div class="main-slider__description">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone</div>
-                <a href="/" class="main-slider__link">Products</a>
+                <div class="main-slider__title">МЫ ПРОДАЕМ</div>
+                <div class="main-slider__description">
+                  БЫТОВАЯ ХИМИЯ <br>
+                  ЛИЧНАЯ ГИГИЕНА <br>
+                  ПАМПЕРСЫ <br>
+                  БЫТОВАЯ ХИМИЯ <br>
+                </div>
               </div>
+              <a href="/" class="main-slider__link">Подробнее</a>
               <div class="main-slider__right">
-                <div class="main-prods__slide active">
-                  <div class="main-prods__img">
-                    <img src="images/dist/main-prods-7.jpg" alt="">
-                  </div>
-                  <div class="main-prods__content">
-                    <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-                    <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-                    <div class="main-prods__chars">
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                      </div>
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                      </div>
-                    </div>
-                    <div class="main-prods__icons">
-                      <div class="main-prods__icon">
-                        <img src="images/dist/conector.svg" alt="">
-                        <div class="main-prods__icon-em">GB/T</div>
-                      </div>
-                      <div class="main-prods__icon">
-                        <img src="images/dist/chademo.svg" alt="">
-                        <div class="main-prods__icon-em">CHADEMO</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="main-prods__slide active">
-                  <div class="main-prods__img">
-                    <img src="images/dist/main-prods-8.jpg" alt="">
-                  </div>
-                  <div class="main-prods__content">
-                    <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-                    <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-                    <div class="main-prods__chars">
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                      </div>
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                      </div>
-                    </div>
-                    <div class="main-prods__icons">
-                      <div class="main-prods__icon">
-                        <img src="images/dist/conector.svg" alt="">
-                        <div class="main-prods__icon-em">GB/T</div>
-                      </div>
-                      <div class="main-prods__icon">
-                        <img src="images/dist/chademo.svg" alt="">
-                        <div class="main-prods__icon-em">CHADEMO</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide main-slider__slide">
-            <div class="main-slider__img">
-              <img src="images/dist/main-slider-3.jpg" alt="">
-            </div>
-            <div class="main-slider__content">
-              <div class="main-slider__left">
-                <div class="main-slider__name">Franchise</div>
-                <div class="main-slider__title">Unique Solutions <br>
-                  For Commercial</div>
-                <div class="main-slider__description">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone</div>
-                <a href="/" class="main-slider__link">Products</a>
-              </div>
-              <div class="main-slider__right">
-                <div class="main-prods__slide active">
-                  <div class="main-prods__img">
-                    <img src="images/dist/main-prods-2.jpg" alt="">
-                  </div>
-                  <div class="main-prods__content">
-                    <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-                    <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-                    <div class="main-prods__chars">
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                      </div>
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                      </div>
-                    </div>
-                    <div class="main-prods__icons">
-                      <div class="main-prods__icon">
-                        <img src="images/dist/conector.svg" alt="">
-                        <div class="main-prods__icon-em">GB/T</div>
-                      </div>
-                      <div class="main-prods__icon">
-                        <img src="images/dist/chademo.svg" alt="">
-                        <div class="main-prods__icon-em">CHADEMO</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="main-prods__slide active">
-                  <div class="main-prods__img">
-                    <img src="images/dist/main-prods-2.jpg" alt="">
-                  </div>
-                  <div class="main-prods__content">
-                    <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-                    <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-                    <div class="main-prods__chars">
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                      </div>
-                      <div class="main-prods__chars-item">
-                        <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                        <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                      </div>
-                    </div>
-                    <div class="main-prods__icons">
-                      <div class="main-prods__icon">
-                        <img src="images/dist/conector.svg" alt="">
-                        <div class="main-prods__icon-em">GB/T</div>
-                      </div>
-                      <div class="main-prods__icon">
-                        <img src="images/dist/chademo.svg" alt="">
-                        <div class="main-prods__icon-em">CHADEMO</div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="main-slider__title main-slider__title--right">О КОМПАНИИ</div>
+                <div class="main-slider__text">
+                  Мы предлагаем полный спектр профессиональных услуг по <a href="">производству бытовой химии</a> любой степени сложности
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="main-slider__controllers">
-          <div class="main-slider__pag"></div>
+        <div class="swiper-slide main-slider__slide">
+          <div class="main-slider__img">
+            <img src="images/dist/main-slider-2.jpg" alt="">
+          </div>
+          <div class="container">
+            <div class="main-slider__content">
+              <div class="main-slider__left">
+                <div class="main-slider__title">МЫ ПРОДАЕМ</div>
+                <div class="main-slider__description">
+                  БЫТОВАЯ ХИМИЯ <br>
+                  ЛИЧНАЯ ГИГИЕНА <br>
+                  ПАМПЕРСЫ <br>
+                  БЫТОВАЯ ХИМИЯ <br>
+                </div>
+              </div>
+              <a href="/" class="main-slider__link">Подробнее</a>
+              <div class="main-slider__right">
+                <div class="main-slider__title main-slider__title--right">О КОМПАНИИ</div>
+                <div class="main-slider__text">
+                  Мы предлагаем полный спектр профессиональных услуг по <a href="">производству бытовой химии</a> любой степени сложности
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-slider__controllers">
+        <div class="container">
           <div class="main-slider__nav">
-            <button class="main-slider__prev">prev</button>
-            <button class="main-slider__next">next</button>
+            <button class="main-slider__prev slider-prev"></button>
+            <button class="main-slider__next slider-next"></button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-  <section class="main-news">
-  <div class="container">
-    <div class="main-news__inner">
-      <div class="main-news__item">
-        <div class="main-news__img">
-          <img src="images/dist/main-mews-1.jpg" alt="">
-        </div>
-        <div class="main-news__content">
-          <div class="main-news__tag">For EV Drives</div>
-          <div>
-            <div class="main-news__title">Unique Solutions <br>
-              For Charging Stations</div>
-            <div class="main-news__description">Our residential, commercial and fast charging stations<br> are widely compatible, built on open standards, and<br> designed to be accessible for everyone</div>
-            <a href="/" class="main-news__link">Learn more</a>
-          </div>
-          <div></div>
-        </div>
-      </div>
-      <div class="main-news__item">
-        <div class="main-news__img">
-          <img src="images/dist/main-mews-2.jpg" alt="">
-        </div>
-        <div class="main-news__content">
-          <div class="main-news__tag">For business</div>
-          <div>
-            <div class="main-news__title">Unique Solutions <br>
-              For Charging Stations</div>
-            <div class="main-news__description">Our residential, commercial and fast charging stations<br> are widely compatible, built on open standards, and<br> designed to be accessible for everyone</div>
-            <a href="/" class="main-news__link">Learn more</a>
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <section class="main-prods main-prods--index">
+  <section class="main-prods">
   <div class="container">
     <div class="main-prods__inner">
-      <div class="section-title main-prods__mtitle">Our Products</div>
-      <div class="swiper-container main-prods__slider">
-        <div class="swiper-wrapper main-prods__wrapper">
-          <a href="/" class="swiper-slide main-prods__slide">
-            <div class="main-prods__img">
-              <img src="images/dist/main-prods-9.jpg" alt="">
-            </div>
-            <div class="main-prods__content">
-              <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-              <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-              <div class="main-prods__chars">
-                <div class="main-prods__chars-item">
-                  <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                  <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                </div>
-                <div class="main-prods__chars-item">
-                  <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                  <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                </div>
-              </div>
-              <div class="main-prods__icons">
-                <div class="main-prods__icon">
-                  <img src="images/dist/conector.svg" alt="">
-                  <div class="main-prods__icon-em">GB/T</div>
-                </div>
-                <div class="main-prods__icon">
-                  <img src="images/dist/chademo.svg" alt="">
-                  <div class="main-prods__icon-em">CHADEMO</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="/" class="swiper-slide main-prods__slide">
-            <div class="main-prods__img">
-              <img src="images/dist/main-prods-7.jpg" alt="">
-            </div>
-            <div class="main-prods__content">
-              <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-              <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-              <div class="main-prods__chars">
-                <div class="main-prods__chars-item">
-                  <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                  <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                </div>
-                <div class="main-prods__chars-item">
-                  <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                  <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                </div>
-              </div>
-              <div class="main-prods__icons">
-                <div class="main-prods__icon">
-                  <img src="images/dist/conector.svg" alt="">
-                  <div class="main-prods__icon-em">GB/T</div>
-                </div>
-                <div class="main-prods__icon">
-                  <img src="images/dist/chademo.svg" alt="">
-                  <div class="main-prods__icon-em">CHADEMO</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="/" class="swiper-slide main-prods__slide">
-            <div class="main-prods__img">
-              <img src="images/dist/main-prods-5.jpg" alt="">
-            </div>
-            <div class="main-prods__content">
-              <div class="main-prods__title"><div class="main-prods__title-em">MaxiCharger Commercial</div></div>
-              <div class="main-prods__description"><div class="main-prods__description-em">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone.</div></div>
-              <div class="main-prods__chars">
-                <div class="main-prods__chars-item">
-                  <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Power</div></div>
-                  <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">~150 kW</div></div>
-                </div>
-                <div class="main-prods__chars-item">
-                  <div class="main-prods__chars-k"><div class="main-prods__chars-k-em">Charge time up to 80%</div></div>
-                  <div class="main-prods__chars-v"><div class="main-prods__chars-v-em">40 min</div></div>
-                </div>
-              </div>
-              <div class="main-prods__icons">
-                <div class="main-prods__icon">
-                  <img src="images/dist/conector.svg" alt="">
-                  <div class="main-prods__icon-em">GB/T</div>
-                </div>
-                <div class="main-prods__icon">
-                  <img src="images/dist/chademo.svg" alt="">
-                  <div class="main-prods__icon-em">CHADEMO</div>
-                </div>
-              </div>
-            </div>
-          </a>
+      <div class="main-prods__head">
+        <div class="section-title main-prods__mtitle">Популярные товары</div>
+        <a href="" class="main-prods__more">Показать ещё</a>
+      </div>
+      <div class="catalog">
+  <a href="" class="catalog__item">
+    <div class="catalog__img">
+      <img src="images/dist/item1.png" alt="">
+    </div>
+    <div class="catalog__content">
+      <div>
+        <div class="catalog__title">UNIREX</div>
+        <div class="catalog__description">Чистящее средство для
+          ванны и раковины</div>
+        <div class="catalog__footer">
+          <div class="catalog__art">Артикул: 992887</div>
+          <div class="catalog__arrow"></div>
         </div>
-        <div class="main-prods__controllers">
-          <div class="main-prods__pag"></div>
-          <div class="main-prods__nav">
-            <button class="main-prods__prev"></button>
-            <button class="main-prods__next"></button>
+      </div>
+    </div>
+  </a>
+  <a href="" class="catalog__item">
+    <div class="catalog__img">
+      <img src="images/dist/item2.png" alt="">
+    </div>
+    <div class="catalog__content">
+      <div>
+        <div class="catalog__title">UNIREX</div>
+        <div class="catalog__description">Чистящее средство для
+          ванны и раковины</div>
+        <div class="catalog__footer">
+          <div class="catalog__art">Артикул: 992887</div>
+          <div class="catalog__arrow"></div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="" class="catalog__item">
+    <div class="catalog__img">
+      <img src="images/dist/item1.png" alt="">
+    </div>
+    <div class="catalog__content">
+      <div>
+        <div class="catalog__title">UNIREX</div>
+        <div class="catalog__description">Чистящее средство для
+          ванны и раковины</div>
+        <div class="catalog__footer">
+          <div class="catalog__art">Артикул: 992887</div>
+          <div class="catalog__arrow"></div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="" class="catalog__item">
+    <div class="catalog__img">
+      <img src="images/dist/item2.png" alt="">
+    </div>
+    <div class="catalog__content">
+      <div>
+        <div class="catalog__title">UNIREX</div>
+        <div class="catalog__description">Чистящее средство для
+          ванны и раковины</div>
+        <div class="catalog__footer">
+          <div class="catalog__art">Артикул: 992887</div>
+          <div class="catalog__arrow"></div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+    </div>
+  </div>
+</section>
+  <section class="main-about">
+  <div class="container">
+    <div class="main-about__inner">
+      <div class="main-about__left">
+        <div class="main-about__suptitle">О нас</div>
+        <div class="main-about__title">
+          МЫ - КРУПНАЯ КОМПАНИЯ <br>
+          <span>ПО ОПТОВОЙ ПРОДАЖЕ </span><br>
+          БЫТОВОЙ ХИМИИ
+        </div>
+      </div>
+      <div class="main-about__right">
+        <div class="main-about__text">Равным образом, курс на социально-ориентированный национальный проект влечет за собой процесс внедрения и модернизации существующих административных условий!</div>
+        <button class="btn main-about__req">Связаться</button>
+      </div>
+      <div class="main-about__bottom">
+        <div class="main-about__content">
+          <div class="main-about__img main-about__img--1">
+            <img src="/images/dist/video-poster1.jpg" alt="">
+          </div>
+          <div class="main-about__img main-about__img--2">
+            <img src="/images/dist/video-poster2.jpg" alt="">
+          </div>
+          <div class="main-about__video">
+            <video src="" poster="/images/dist/poster1.jpg"></video>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-  <section class="main-app">
+  <div class="main-advantages">
   <div class="container">
-    <div class="section-title">Mobile App</div>
-    <div class="main-app__inner">
-      <div class="main-app__bg">
-        <img class="only-pc" src="images/dist/main-app-bg.jpg" alt="">
-        <img class="only-sp" src="images/dist/app-device-mob.jpg" alt="">
-      </div>
-      <div class="main-app__item">
-        <div class="main-app__img">
-          <img class="only-pc" src="images/dist/app-device.png" alt="">
-          <img class="only-sp" src="images/dist/main-app-bg-mob.png" alt="">
+    <div class="main-advantages__inner">
+      <div class="section-title main-advantages__mtitle">Наши преимущества</div>
+      <div class="main-advantages__list">
+        <div class="main-advantages__item">
+          <div class="main-advantages__icon">
+            <img src="/images/dist/advantages1.svg" alt="">
+          </div>
+          <div class="main-advantages__name">Индивидуальный <br> подход к клиенту</div>
         </div>
-        <div class="main-app__content">
-          <div class="main-app__title">Unique Solutions <br>
-            For Charging Stations</div>
-          <div class="main-app__description">Our residential, commercial and fast charging stations<br> are widely compatible, built on open standards, and<br> designed to be accessible for everyone</div>
-          <div class="main-app__app-title">Download app</div>
-          <div class="main-app__apps">
-            <a href="/" class="main-app__app">
-              <img src="images/dist/app-store.svg" alt="">
-            </a>
-            <a href="/" class="main-app__app">
-              <img src="images/dist/play-market.svg" alt="">
-            </a>
+        <div class="main-advantages__item">
+          <div class="main-advantages__icon">
+            <img src="/images/dist/advantages2.svg" alt="">
+          </div>
+          <div class="main-advantages__name">Индивидуальный<br> подход к клиенту</div>
+        </div>
+        <div class="main-advantages__item">
+          <div class="main-advantages__icon">
+            <img src="/images/dist/advantages3.svg" alt="">
+          </div>
+          <div class="main-advantages__name">Соответствие<br> стандартам</div>
+        </div>
+        <div class="main-advantages__item">
+          <div class="main-advantages__icon">
+            <img src="/images/dist/advantages4.svg" alt="">
+          </div>
+          <div class="main-advantages__name">Индивидуальный<br> подход к клиенту</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="about-stat">
+    <div class="container">
+      <div class="section-title">Компания сегодня</div>
+      <div class="about-stat__inner">
+        <div class="about-stat__left">
+          <div class="about-stat__item">
+            <div class="about-stat__n">
+              <div class="about-stat__v">500</div>
+              <div class="about-stat__c">единиц</div>
+            </div>
+            <div class="about-stat__name">товаров в каталоге</div>
+          </div>
+          <div class="about-stat__item">
+            <div class="about-stat__n">
+              <div class="about-stat__v">410</div>
+              <div class="about-stat__c">единиц</div>
+            </div>
+            <div class="about-stat__name">товаров в каталоге</div>
+          </div>
+          <div class="about-stat__item">
+            <div class="about-stat__n">
+              <div class="about-stat__v">341</div>
+              <div class="about-stat__c">единиц</div>
+            </div>
+            <div class="about-stat__name">товаров в каталоге</div>
+          </div>
+          <div class="about-stat__item">
+            <div class="about-stat__n">
+              <div class="about-stat__v">50</div>
+              <div class="about-stat__c">единиц</div>
+            </div>
+            <div class="about-stat__name">товаров в каталоге</div>
+          </div>
+        </div>
+        <div class="about-stat__right">
+          <div class="about-stat__text">
+            Наша компания является эксклюзивным дистрибьютором торговых марок производителей из Турции. Являясь одной из самых распространённых в мире сельскохозяйственных культур, рис занимает главенствующую позицию в национальной кухне сотен народов. В России до XIX века рис называли «сарацинское зерно». Более половины населения Земли питаются в основном именно рисом, что делает эту сельскохозяйственную культуру важнейшей на планете. В некоторых странах Азии из этого растения готовят такие напитки, как вино и пиво. Из рисовых зерён делают так называемую съедобную рисовую бумагу, применяемую в кондитерском деле.
+            <br><br>
+            Здоровый праздничный ужин вовсе не обязательно должен состоять из шпината, гречки и вареной куриной грудки. Самыми лучшими способами приготовления еды являются следующие: варка на пару, запекание или варка в воде. Помимо стандартных мандаринов и ананасов, отличным украшением любого стола станут необычные, экзотические фрукты. Здоровой может быть даже выпечка, если она приготовлена на пару.
+            <br><br>
+            Человеческий организм получает почти все необходимые вещества именно через пищу и воду. С питанием связаны все жизненно важные функции организма. Недостаток полезных веществ, содержащихся в том же мясе, например железа высокой биологической доступности, может вызвать серьезные проблемы со здоровьем.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="partners">
+  <div class="container">
+    <div class="partners__inner">
+      <div class="partners__head">
+        <div>
+          <div class="section-title partners__mtitle">Наши партнеры</div>
+          <div class="partners__subtitle">Мы и наши партнеры готовы предлагать полный спектр <br> услуг по производству косметики, быт химии под СТМ</div>
+        </div>
+        <div class="partners__nav">
+          <button class="partners__prev slider-prev slider-prev--dark"></button>
+          <button class="partners__next slider-next slider-next--dark"></button>
+        </div>
+      </div>
+      <div class="swiper-container partners__slider">
+        <div class="swiper-wrapper partners__wrapper">
+          <div class="swiper-slide partners__slide">
+            <img src="/images/dist/partner1.jpg" alt="">
+          </div>
+          <div class="swiper-slide partners__slide">
+            <img src="/images/dist/partner1.jpg" alt="">
+          </div>
+          <div class="swiper-slide partners__slide">
+            <img src="/images/dist/partner1.jpg" alt="">
+          </div>
+          <div class="swiper-slide partners__slide">
+            <img src="/images/dist/partner1.jpg" alt="">
+          </div>
+          <div class="swiper-slide partners__slide">
+            <img src="/images/dist/partner1.jpg" alt="">
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-  <div class="map">
+</div>
+  <div class="main-news">
   <div class="container">
-    <div class="section-title">Map of Energy</div>
-    <div class="map__inner">
-      <div class="map__left">
-        <div id="map"></div>
+    <div class="main-news__inner">
+      <div class="main-news__head">
+        <div class="main-news__left">
+          <div class="section-title main-news__mtitle">Новости</div>
+          <div class="main-news__nav">
+            <button class="main-news__prev slider-prev slider-prev--dark"></button>
+            <button class="main-news__next slider-next slider-next--dark"></button>
+          </div>
+        </div>
+        <div class="main-news__right">
+          <div class="main-news__subtitle">Идейные соображения высшего порядка, а также <br> семантический разбор внешних противодействий.</div>
+          <div class="main-news__btns">
+            <button class="btn main-news__all">Все новости</button>
+            <button class="btn btn--white">Оставить заявку</button>
+          </div>
+        </div>
       </div>
-      <div class="map__right">
-        <div class="map__title">
-          <span>253 </span>charging stations
+      <div class="swiper-container main-news__slider">
+        <div class="swiper-wrapper main-news__wrapper">
+          <a href="" class="swiper-slide main-news__slide">
+            <div class="main-news__date">30 марта 2023 <span>Новости</span></div>
+            <div class="main-news__anons">МБМ запустил формат нейротренингов в темноте для предпринимателей Москвы</div>
+            <div class="main-news__more">
+              <span>Подробнее</span>
+            </div>
+          </a>
+          <a href="" class="swiper-slide main-news__slide">
+            <div class="main-news__date">30 марта 2023 <span>Новости</span></div>
+            <div class="main-news__anons">МБМ запустил формат нейротренингов в темноте для предпринимателей Москвы</div>
+            <div class="main-news__more">
+              <span>Подробнее</span>
+            </div>
+          </a>
+          <a href="" class="swiper-slide main-news__slide">
+            <div class="main-news__date">30 марта 2023 <span>Новости</span></div>
+            <div class="main-news__anons">МБМ запустил формат нейротренингов в темноте для предпринимателей Москвы</div>
+            <div class="main-news__more">
+              <span>Подробнее</span>
+            </div>
+          </a>
+          <a href="" class="swiper-slide main-news__slide">
+            <div class="main-news__date">30 марта 2023 <span>Новости</span></div>
+            <div class="main-news__anons">МБМ запустил формат нейротренингов в темноте для предпринимателей Москвы</div>
+            <div class="main-news__more">
+              <span>Подробнее</span>
+            </div>
+          </a>
+          <a href="" class="swiper-slide main-news__slide">
+            <div class="main-news__date">30 марта 2023 <span>Новости</span></div>
+            <div class="main-news__anons">МБМ запустил формат нейротренингов в темноте для предпринимателей Москвы</div>
+            <div class="main-news__more">
+              <span>Подробнее</span>
+            </div>
+          </a>
         </div>
-        <div class="map__text">Our residential, commercial and fast charging stations are widely compatible, built on open standards, and designed to be accessible for everyone</div>
-        <div class="map__list">
-          <div class="map__item" data-lat="40.676190" data-lng="-74.008581">
-            <div class="map__local">New York</div>
-            <div class="map__counter">25 charging stations</div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="contact-form">
+  <div class="container">
+    <div class="contact-form__inner">
+      <div class="contact-form__left">
+        <div class="contact-form__title">Запрос прайс-листа</div>
+        <div class="contact-form__text">Вы можете использовать форму для своих <br> предложений или вопросов. Так вы <br> поможете нам стать ещё лучше!</div>
+      </div>
+      <div class="contact-form__right">
+        <form class="form js-contact-form">
+          <div class="form__inner">
+            <div class="form__item form__item--50">
+              <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+            </div>
+            <div class="form__item form__item--50">
+              <input type="email" name="email" class="form__input" placeholder="Почта" required>
+            </div>
+            <div class="form__item form__item--50">
+              <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
+            </div>
+            <div class="form__item form__item--50">
+              <select name="products" id="" class="form__select">
+                <option value="Products">Цель обращения</option>
+              </select>
+            </div>
+            <div class="form__item form__item--100">
+              <textarea name="comment" class="form__textarea" placeholder="Ваше сообщение" required maxlength="500"></textarea>
+            </div>
           </div>
-          <div class="map__item" data-lat="38.904625" data-lng="-77.036213">
-            <div class="map__local">Washington</div>
-            <div class="map__counter">25 charging stations</div>
+          <div class="form__actions">
+            <div class="form__conf">
+              <label class="form__conf-label">
+                <input type="checkbox" class="visually-hidden" required>
+                <span></span>
+              </label>
+              <div class="form__conf-text">Отправляя форму, вы соглашаетесь <br> с политикой конфиденциальности</div>
+            </div>
+            <button class="btn form__send js-contact-btn">Отправить</button>
           </div>
-          <div class="map__item" data-lat="40.676190" data-lng="-74.008581">
-            <div class="map__local">New York</div>
-            <div class="map__counter">25 charging stations</div>
-          </div>
-          <div class="map__item" data-lat="40.676190" data-lng="-74.008581">
-            <div class="map__local">New York</div>
-            <div class="map__counter">25 charging stations</div>
-          </div>
-          <div class="map__item" data-lat="40.676190" data-lng="-74.008581">
-            <div class="map__local">New York</div>
-            <div class="map__counter">25 charging stations</div>
-          </div>
-          <div class="map__item" data-lat="40.676190" data-lng="-74.008581">
-            <div class="map__local">New York</div>
-            <div class="map__counter">25 charging stations</div>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -606,68 +448,37 @@
         <div class="footer__inner">
           <div class="footer__left">
             <a href="/" class="footer__logo">
-              <img src="images/dist/footer-logo.svg" alt="">
+              <img src="images/dist/logo-black.svg" alt="">
             </a>
-            <div class="footer__desk">
-              <a href="/" class="footer__tel">8 800 123 45 67</a>
-              <a href="" class="footer__email">info@icapia.com</a>
-              <div class="footer__socs">
-                <a href="/" class="footer__soc">
-                  <img src="images/dist/instagram.svg" alt="">
-                </a>
-              </div>
+          </div>
+          <div class="footer__center">
+            <div class="footer__item">
+              <div class="footer__title">309556, Новосибирская <br> область, город Серебряные <br> Пруды, пер. Ломоносова, 13</div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">info@example.ru</div>
             </div>
           </div>
           <div class="footer__right">
-            <div class="footer__list">
-              <div class="footer__item">
-                <div class="footer__title">Products</div>
-                <div class="footer__links">
-                  <a href="/" class="footer__link">Products for home</a>
-                  <a href="/" class="footer__link">Products for business</a>
-                  <a href="/" class="footer__link">Resources</a>
-                  <a href="/" class="footer__link">Ecology</a>
-                </div>
-              </div>
-              <div class="footer__item">
-                <div class="footer__title">ABOUT</div>
-                <div class="footer__links">
-                  <a href="/" class="footer__link">About Us</a>
-                  <a href="/" class="footer__link">Contact Us</a>
-                  <a href="/" class="footer__link">Team</a>
-                  <a href="/" class="footer__link">Jobs</a>
-                </div>
-              </div>
-              <div class="footer__item">
-                <div class="footer__title">INFO</div>
-                <div class="footer__links">
-                  <a href="/" class="footer__link">Support</a>
-                  <a href="/" class="footer__link">Terms of Service</a>
-                  <a href="/" class="footer__link">Cookies</a>
-                  <a href="/" class="footer__link">Privacy Police</a>
-                </div>
-              </div>
+            <div class="footer__item">
+              <div class="footer__title">+7 (495) 555 32 54</div>
+              <div class="footer__subtitle">Приемная</div>
             </div>
-            <div class="footer__app">
-              <div class="footer__app-title">Download app</div>
-              <div class="footer__apps">
-                <a href="/" class="footer__app-link">
-                  <img src="images/dist/app-store.svg" alt="">
-                </a>
-                <a href="/" class="footer__app-link">
-                  <img src="images/dist/play-market.svg" alt="">
-                </a>
-              </div>
+            <div class="footer__item">
+              <div class="footer__title">+7 (495) 555 32 54</div>
+              <div class="footer__subtitle">Приемная</div>
             </div>
-            <div class="footer__mob">
-              <a href="/" class="footer__tel">8 800 123 45 67</a>
-              <a href="" class="footer__email">info@icapia.com</a>
-              <div class="footer__socs">
-                <a href="/" class="footer__soc">
-                  <img src="images/dist/instagram.svg" alt="">
-                </a>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__left">
+            <div class="footer__bot">Все права защищены</div>
+          </div>
+          <div class="footer__center">
+            <div class="footer__bot">Политика конфиденциальности</div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__bot">Cookies</div>
           </div>
         </div>
       </div>
@@ -682,85 +493,8 @@
         <div class="accepted__icon">
           <img src="images/dist/accepted.svg" alt="">
         </div>
-        <div class="accepted__title">Your application has<br class="only-sp"> been accepted,<br class="only-pc"> we will<br class="only-sp"> contact you soon</div>
-        <div class="accepted__text">Pending a response, you can view <br> <a href="/">other products</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="modal close-x" data-modal="review-accepted">
-  <div class="modal__inner">
-    <button class="modal__close close-x" type="button">
-      <img class="close-x" src="images/dist/modal-close.svg" alt="">
-    </button>
-    <div class="modal__content">
-      <div class="accepted">
-        <div class="accepted__icon">
-          <img src="images/dist/accepted.svg" alt="">
-        </div>
-        <div class="accepted__title">Thank you for contact!</div>
-        <div class="accepted__text">Your review has been received and will be published soon.</div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="modal close-x" data-modal="cart-added">
-  <div class="modal__inner">
-    <button class="modal__close close-x" type="button">
-      <img class="close-x" src="images/dist/modal-close.svg" alt="">
-    </button>
-    <div class="modal__content">
-      <div class="accepted">
-        <div class="accepted__icon">
-          <img src="images/dist/accepted.svg" alt="">
-        </div>
-        <div class="accepted__title">Product moved to cart!</div>
-        <div class="accepted__text">Go to the <a href="/">shopping cart</a> to order or <br> view other products.</div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="modal close-x" data-modal="review">
-  <div class="modal__inner">
-    <button class="modal__close close-x" type="button">
-      <img class="close-x" src="images/dist/modal-close.svg" alt="">
-    </button>
-    <div class="modal__content">
-      <div class="review-form">
-        <div class="review-form__inner">
-          <div class="review-form__left">
-            <div class="review-form__title">Write a review</div>
-            <div class="review-form__text"> You can leave a contact so <br> we can improve our products </div>
-          </div>
-          <div class="review-form__right">
-            <form class="form js-review-form">
-              <div class="form__inner">
-                <div class="form__item">
-                  <input type="text" name="name" class="form__input" placeholder="Your name" required>
-                </div>
-                <div class="form__item form__item--100">
-                  <textarea name="comment" class="form__textarea form__textarea--big" placeholder="Your message" required
-                    maxlength="500"></textarea>
-                </div>
-              </div>
-              <div class="form__actions form__actions--review">
-                <div class="stars">
-                  <input type="radio" name="stars" value="star_5" id="star_5" class="visually-hidden" required>
-                  <label for="star_5"></label>
-                  <input type="radio" name="stars" value="star_4" id="star_4" class="visually-hidden" required>
-                  <label for="star_4"></label>
-                  <input type="radio" name="stars" value="star_3" id="star_3" class="visually-hidden" required>
-                  <label for="star_3"></label>
-                  <input type="radio" name="stars" value="star_2" id="star_2" class="visually-hidden" required>
-                  <label for="star_2"></label>
-                  <input type="radio" name="stars" value="star_1" id="star_1" class="visually-hidden" required>
-                  <label for="star_1"></label>
-                </div>
-                <button class="btn form__send  js-review-btn">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
+        <div class="accepted__title">Зарос отправлен</div>
+        <div class="accepted__text">Пока вы можете посмотреть <br> <a href="/">другие товары</a></div>
       </div>
     </div>
   </div>
@@ -771,88 +505,43 @@
       <img class="close-x" src="images/dist/modal-close.svg" alt="">
     </button>
     <div class="modal__content">
-      <div class="contact-form">
-  <div class="container">
-    <div class="contact-form__inner">
-      <div class="contact-form__left">
-        <div class="contact-form__title">Contact us</div>
-        <div class="contact-form__text">
-          Use the form or email us 
-          <br>
-          <a href="mailto:ranjiticapia@icapia.com">ranjiticapia@icapia.com</a>
+      <div class="contact-form2">
+  <div class="contact-form2__inner">
+    <div class="contact-form2__title">Запрос прайс-листа</div>
+    <div class="contact-form2__text">Вы можете использовать форму для своих <br> предложений или вопросов. Так вы <br>
+      поможете нам стать ещё лучше!</div>
+    <form class="form form--modal js-contact-form2">
+      <div class="form__inner">
+        <div class="form__item form__item--33">
+          <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+        </div>
+        <div class="form__item form__item--33">
+          <input type="email" name="email" class="form__input" placeholder="Почта" required>
+        </div>
+        <div class="form__item form__item--33">
+          <input type="tel" name="tel" class="form__input" placeholder="Телефон" required>
+        </div>
+        <div class="form__item form__item--100">
+          <select name="products" id="" class="form__select">
+            <option value="Products">Цель обращения</option>
+          </select>
+        </div>
+        <div class="form__item form__item--100">
+          <textarea name="comment" class="form__textarea" placeholder="Ваше сообщение" required
+            maxlength="500"></textarea>
         </div>
       </div>
-      <div class="contact-form__right">
-        <form class="form js-contact-form">
-          <div class="form__inner">
-            <div class="form__item form__item--50">
-              <input type="text" name="name" class="form__input" placeholder="Your name" required>
-            </div>
-            <div class="form__item form__item--50">
-              <input type="email" name="email" class="form__input" placeholder="Email" required>
-            </div>
-            <div class="form__item form__item--50">
-              <input type="tel" name="tel" class="form__input" placeholder="Phone" required>
-            </div>
-            <div class="form__item form__item--50">
-              <select name="products" id="" class="form__select">
-                <option value="Products">Products</option>
-              </select>
-            </div>
-            <div class="form__item form__item--100">
-              <textarea name="comment" class="form__textarea" placeholder="Your message" required maxlength="500"></textarea>
-            </div>
-          </div>
-          <div class="form__actions">
-            <button class="btn form__send js-contact-btn">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-    <div class="modal close-x" data-modal="order">
-  <div class="modal__inner">
-    <button class="modal__close close-x" type="button">
-      <img class="close-x" src="images/dist/modal-close.svg" alt="">
-    </button>
-    <div class="modal__content">
-      <div class="contact-form">
-  <div class="container">
-    <div class="contact-form__inner">
-      <div class="contact-form__left">
-        <div class="contact-form__title">Order</div>
-        <div class="contact-form__text">
-          Use the form or email us 
-          <br>
-          <a href="mailto:ranjiticapia@icapia.com">ranjiticapia@icapia.com</a>
+      <div class="form__actions form__actions--modal">
+        <button class="btn form__send js-contact-btn">Отправить</button>
+        <div class="form__conf">
+          <label class="form__conf-label">
+            <input type="checkbox" class="visually-hidden" required>
+            <span></span>
+          </label>
+          <div class="form__conf-text">Отправляя форму, вы соглашаетесь <br> с политикой конфиденциальности</div>
         </div>
       </div>
-      <div class="contact-form__right">
-        <form class="form js-form-order">
-          <div class="form__inner">
-            <div class="form__item form__item--100">
-              <input type="text" name="name" class="form__input" placeholder="Your name" required>
-            </div>
-            <div class="form__item form__item--50">
-              <input type="email" name="email" class="form__input" placeholder="Email" required>
-            </div>
-            <div class="form__item form__item--50">
-              <input type="tel" name="tel" class="form__input" placeholder="Phone" required>
-            </div>
-            <div class="form__item form__item--100">
-              <textarea name="comment" class="form__textarea" placeholder="Your message" required maxlength="500"></textarea>
-            </div>
-          </div>
-          <div class="form__actions">
-            <button class="btn form__send js-order">Order</button>
-          </div>
-        </form>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
     </div>
@@ -860,7 +549,7 @@
 </div>
   </div>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMF4zbNZ3i17RD5OkkD5H75ePPcio1Adg&callback=initMap&v=weekly"
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"
     defer
   ></script>
   <script src="js/app.min.js"></script>
