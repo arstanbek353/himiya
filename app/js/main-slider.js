@@ -10,9 +10,9 @@ export default function () {
       loop: true,
       effect: 'fade',
       loopedSlides: 4,
-      autoplay: {
-        delay: delay,
-      },
+      // autoplay: {
+      //   delay: delay,
+      // },
       navigation: {
         nextEl: nextNode,
         prevEl: prevNode,

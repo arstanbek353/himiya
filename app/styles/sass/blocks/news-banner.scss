@@ -30,4 +30,21 @@
     font-weight: 600;
     line-height: 144.4%;
   }
+  @media (max-width: 48em) {
+    margin-bottom: 0;
+    &__inner {
+      min-height: 64.2rem;
+      height: 100vh;
+      padding-top: 11.2rem;
+      padding-bottom: 9.4rem;
+    }
+    &__title {
+      font-size: 3.2rem;
+      margin-bottom: 1.6rem;
+    }
+    &__text {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+  }
 }

@@ -142,6 +142,9 @@
       &--50 {
         width: 100%;
       }
+      &--33 {
+        width: 100%;
+      }
     }
     &__input {
       width: 100%;
@@ -164,15 +167,10 @@
     }
     &__actions {
       margin-top: 2rem;
-      display: flex;
-      justify-content: stretch;
-      &--review {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        .stars {
-          margin-bottom: 5rem;
-        }
+      flex-direction: column;
+      gap: 2rem;
+      &--modal {
+        flex-direction: column-reverse;
       }
     }
     &__send {

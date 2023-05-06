@@ -59,35 +59,55 @@
     }
   }
   @media (max-width: 48em) {
-    margin-bottom: 9rem;
-    &__inner {
+    margin-bottom: 10rem;
+    &__head {
       display: block;
+      margin-bottom: 3rem;
     }
-    &__item {
-      border-radius: 2rem;
+    &__mtitle {
+      margin-bottom: 0;
+    }
+    &__slider {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    &__slide {
+      padding: 3.6rem 1.8rem;
+      border-radius: 1.5rem;
+    }
+    &__date {
+      font-size: 1.4rem;
+      margin-bottom: 1.6rem;
+    }
+    &__anons {
+      font-size: 1.6rem;
+      margin-bottom: 4rem;
+    }
+    &__more {
+      margin-top: auto;
+    }
+    &__more span {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: #303030;
+      border-bottom: 1px solid #303030;
+      padding-bottom: 0.3rem;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 2rem;
+        height: 1.5rem;
+        margin-left: 1rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../images/dist/arrow3.svg);
+      }
+    }
+    &__all {
       width: 100%;
-      height: 37.5rem;
-      margin-bottom: 2rem;
-    }
-    &__content {
-      padding: 3rem 1.5rem;
-    }
-    &__tag {
-      font-size: 1.4rem;
-    }
-    &__title {
-      font-size: 2.6rem;
-      margin-bottom: 1rem;
-    }
-    &__description {
-      font-size: 1rem;
-      margin-bottom: 2.8rem;
-    }
-    &__link {
-      min-width: 18.2rem;
-      font-size: 1.4rem;
-      padding: 2rem 2.3rem;
-      border-radius: 3.3rem;
     }
   }
 }

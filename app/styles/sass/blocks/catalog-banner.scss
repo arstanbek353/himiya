@@ -29,4 +29,19 @@
     font-weight: 600;
     line-height: 144.4%;
   }
+  @media (max-width: 48em) {
+    &__inner {
+      min-height: 46.2rem;
+      padding-top: 11.2rem;
+      padding-bottom: 4.5rem;
+    }
+    &__title {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+    }
+    &__text {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+  }
 }

@@ -54,4 +54,37 @@
       width: 6.2rem;
     }
   }
+  @media (max-width: 48em) {
+    margin-bottom: 10rem;
+    &__inner {
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+    &__item {
+      width: 100%;
+      min-height: 23.8rem;
+      padding: 2.4rem 1.7rem;
+      border-radius: 1rem;
+    }
+    &__title {
+      font-size: 1.8rem;
+    }
+    &__text {
+      width: 100%;
+      padding-right: 5rem;
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 4;
+    }
+    &__arrow {
+      width: 17rem;
+      height: 17rem;
+      right: -4rem;
+      bottom: -4rem;
+      img {
+        width: 3.8rem;
+      }
+    }
+
+  }
 }

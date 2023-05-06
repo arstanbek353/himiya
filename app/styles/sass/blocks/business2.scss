@@ -31,4 +31,33 @@
       color: #4A4A4A;
     }
   }
+  @media (max-width: 48em) {
+    margin-bottom: 10rem;
+    &__content {
+      flex-direction: column-reverse;
+      margin-bottom: 4rem;
+    }
+    &__text {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+    &__stat {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    &__stat-item {
+      flex-grow: 1;
+      padding: 0.6rem;
+      p {
+        font-size: 2rem;
+        margin-bottom: 0.6rem;
+      }
+      span {
+        font-size: 1.2rem;
+      }
+    }
+
+  }
 }

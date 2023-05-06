@@ -44,9 +44,10 @@
   }
   @media (max-width: 48em) {
     &__inner {
-      max-width: calc(100% - 3rem);
+      max-width: 100%;
       min-width: auto;
       padding: 1.5rem;
+      padding-top: 4rem;
     }
     &__close {
       right: 1rem;

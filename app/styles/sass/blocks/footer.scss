@@ -41,62 +41,43 @@
     color: #A8A8A8;
   }
   @media (max-width: 48em) {
-    padding: 2.4rem 0;
     &__inner {
       display: block;
+      padding-top: 5rem;
+      padding-bottom: 1rem;
     }
     &__left {
-      margin-bottom: 3.8rem;
+      width: 100%;
     }
     &__logo {
-      width: 13.3rem;
-      margin-bottom: 0;
-    }
-    &__tel {
-      font-size: 2.6rem;
-      margin-bottom: 1rem;
-    }
-    &__list {
-      display: block;
+      display: inline-block;
+      width: 10.6rem;
       margin-bottom: 5rem;
     }
-    &__item {
-      min-width: auto;
+    &__center,
+    &__right {
       width: 100%;
-      margin-right: 0;
+    }
+    &__center .footer__title {
+      font-size: 1.6rem;
+    }
+    &__item {
       margin-bottom: 3.5rem;
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
     &__title {
-      font-size: 1.8rem;
-      margin-bottom: 1.4rem;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
     }
-    &__links {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    &__link {
-      width: 50%;
-      margin-bottom: 1.5rem;
-    }
-    &__app {
-      margin-bottom: 4rem;
-    }
-    &__app-title {
-      font-size: 1.4rem;
-      margin-bottom: 0.7rem;
-    }
-    &__app-link {
-      height: 3.7rem;
-    }
-
-    &__desk {
-      display: none;
-    }
-    &__mob {
+    &__bottom {
+      padding: 2rem 0;
       display: block;
+      text-align: center;
+      .footer__right {
+        margin-top: 4rem;
+      }
+    }
+    &__bot {
+      padding: 1rem;
     }
   }
 }

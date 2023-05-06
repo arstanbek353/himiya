@@ -48,7 +48,12 @@
     width: 14.6rem;
     margin-right: 13rem;
   }
-  &__nav-title {
+  &__nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+  &__head {
     display: none;
   }
   &__nav-list {
@@ -72,15 +77,17 @@
     font-weight: 500;
     margin-right: 4rem;
   }
-  &__burger {
+  &__burger,
+  &__pen {
     display: none;
   }
   @media (max-width: 48em) {
     &__inner {
-      min-height: 5.8rem;
+      min-height: 8rem;
     }
     &__logo {
-      width: 13.3rem;
+      width: 12.1rem;
+      margin-right: auto;
     }
     &__nav {
       display: none;
@@ -91,19 +98,34 @@
       width: 100%;
       z-index: 50;
       background-color: #F8F8F8;
-      padding: 8rem 1.5rem 1rem;
+      padding: 2rem 1.5rem 1rem;
       &.active {
         display: block;
       }
     }
+    &__head {
+      display: block;
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4.5rem;
+    }
+    &__h-logo {
+      width: 12.1rem;
+      margin-right: auto;
+    }
+    &__close {
+      width: 1.8rem;
+    }
     &__nav-list {
       display: block;
+      margin-bottom: 3.5rem;
     }
     &__nav-title {
       display: block;
-      font-family: $secondfont;
       font-size: 3.2rem;
-      letter-spacing: 0.005em;
       color: #1F2209;
       margin-bottom: 4rem;
     }
@@ -112,7 +134,8 @@
       align-items: center;
       justify-content: space-between;
       color: #414141;
-      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.6rem;
       margin-right: 0;
       padding: 2.5rem 0;
       border-top: 1px solid #D8D8D8;
@@ -129,28 +152,35 @@
         background-image: url(../images/dist/nav-right.svg);
       }
     }
-    &__controlls {
-      display: flex;
-      align-items: center;
-    }
-    &__cart {
-      width: 3rem;
-      height: 2.6rem;
-      margin-right: 6.6rem;
-      display: none;
-    }
-    &__login {
-      font-weight: 700;
-      color: #FA5507;
-      display: none;
-    }
 
+    &__contacts {
+      display: block;
+    }
+    &__contact {
+      display: block;
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: #9A9B9B;
+      margin: 0;
+      margin-bottom: 3.5rem;
+    }
+    &__req {
+      width: 100%;
+    }
+    &__pen {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+      height: 4rem;
+      margin-right: 1.5rem;
+    }
     &__burger {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 3.4rem;
-      height: 3.4rem;
+      width: 4rem;
+      height: 4rem;
       @include img-contain;
       .burger {
         display: block;

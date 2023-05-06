@@ -26,7 +26,31 @@
       background-image: url(../images/dist/arrow2.svg);
     }
   }
+  &__footer {
+    display: none;
+  }
   @media (max-width: 48em) {
+    margin-bottom: 10rem;
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+    }
+    &__mtitle {
+      margin-bottom: 0;
+    }
+    &__more {
+      font-size: 1.4rem;
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+    &__footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 3rem;
+    }
 
   }
 }

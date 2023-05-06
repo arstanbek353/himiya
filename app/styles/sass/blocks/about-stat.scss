@@ -41,51 +41,29 @@
     color: #4A4A4A;
   }
   @media (max-width: 48em) {
-    margin-bottom: 7rem;
+    margin-bottom: 10rem;
     &__inner {
-      display: block;
-    }
-    &__left {
-      padding-right: 0;
-      margin-bottom: 4rem;
-    }
-    &__mtitle {
-      font-size: 3.2rem;
-      margin-bottom: 1.2rem;
+      flex-direction: column-reverse;
     }
     &__text {
-      font-size: 1.6rem;
-      margin-bottom: 0;
-    }
-    &__more {
-      width: 100%;
       font-size: 1.4rem;
-      padding: 2rem 8rem;
     }
     &__right {
       width: 100%;
-      grid-gap: 3rem 0;
-      margin-bottom: 4rem;
+      margin-bottom: 5rem;
     }
-    &__n {
-      margin-bottom: 1rem;
+    &__left {
+      width: 100%;
+      grid-gap: 3.5rem;
     }
     &__v {
-      font-size: 4.5rem;
-      line-height: 0.75;
-    }
-    &__p {
-      font-size: 1rem;
-      top: 0;
-      padding-left: 1rem;
+      font-size: 3.2rem;
     }
     &__c {
-      font-size: 1rem;
-      padding-left: 1rem;
+      font-size: 1.4rem;
     }
     &__name {
       font-size: 1.4rem;
     }
-
   }
 }

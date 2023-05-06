@@ -72,35 +72,69 @@
     }
   }
   @media (max-width: 48em) {
-    margin-bottom: 9rem;
+    margin-bottom: 10rem;
     &__inner {
+      position: relative;
+      padding-bottom: 7rem;
+    }
+    &__head {
       display: block;
+      margin-bottom: 4rem;
     }
-    &__item {
-      border-radius: 2rem;
+    &__left {
       width: 100%;
-      height: 37.5rem;
-      margin-bottom: 2rem;
     }
-    &__content {
-      padding: 3rem 1.5rem;
-    }
-    &__tag {
+    &__subtitle {
       font-size: 1.4rem;
+      margin-bottom: 0;
     }
-    &__title {
-      font-size: 2.6rem;
-      margin-bottom: 1rem;
+    &__btns {
+      display: flex;
     }
-    &__description {
-      font-size: 1rem;
-      margin-bottom: 2.8rem;
+    &__all {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin-right: 0;
     }
-    &__link {
-      min-width: 18.2rem;
-      font-size: 1.4rem;
-      padding: 2rem 2.3rem;
-      border-radius: 3.3rem;
+    &__nav {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__req {
+      display: none;
+    }
+    &__slider {
+      border-radius: 3rem;
+      overflow: hidden;
+    }
+    &__slide {
+      width: 100%;
+      padding: 3.6rem 1.8rem;
+      border: none;
+      &:first-child {
+        border: none;
+      }
+    }
+    &__date {
+      font-size: 1.6rem;
+      margin-bottom: 1.4rem;
+    }
+    &__anons {
+      font-size: 1.6rem;
+      margin-bottom: 4rem;
+    }
+    &__more {
+      margin-top: auto;
+    }
+    &__more span {
+      padding-bottom: 1.2rem;
+      &::after {
+        width: 1.8rem;
+        height: 1.2rem;
+        margin-left: 1rem;
+      }
     }
   }
 }

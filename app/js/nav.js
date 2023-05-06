@@ -1,6 +1,6 @@
 
 const dark = document.querySelectorAll('.contact-brc, .product-detail')
-export default function modal() {
+export default function nav() {
   class Nav {
     constructor() {
       this.htmlNode = document.querySelector(`html`)
@@ -9,11 +9,13 @@ export default function modal() {
       this.header = document.querySelector(`.header`)
       this.navNode = document.querySelector(`.header__nav`)
       this.burgerNode = document.querySelector('.header__burger')
+      this.closeNode = document.querySelector('.header__close')
       this.init()
     }
     init() {
       if (this.navNode && this.burgerNode) {
-        this.toggleHendler()
+        this.openHendler()
+        this.closeHendler()
         this.scrollHendler()
       }
       if (dark.length) {
@@ -22,7 +24,6 @@ export default function modal() {
       }
     }
     open() {
-      window.search.close()
       this.navNode ? this.navNode.classList.add('active') : null;
       this.burgerNode ? this.burgerNode.classList.add('active') : null;
       this.body ? this.body.classList.add('o-hidden') : null;
@@ -32,14 +33,16 @@ export default function modal() {
       this.burgerNode ? this.burgerNode.classList.remove('active') : null;
       this.body ? this.body.classList.remove('o-hidden') : null;
     }
-    toggleHendler() {
+    openHendler() {
       this.burgerNode.addEventListener('click', (e) => {
         e.preventDefault()
-        if (this.burgerNode.classList.contains('active')) {
-          this.close()
-        } else {
-          this.open()
-        }
+        this.open()
+      })
+    }
+    closeHendler() {
+      this.closeNode.addEventListener('click', (e) => {
+        e.preventDefault()
+        this.close()
       })
     }
     scrollHendler() {

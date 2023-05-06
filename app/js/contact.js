@@ -1,25 +1,8 @@
 
-import {apiUrls, formDataToObject} from './const.js'
-
-const ApiContact = (data) => {
-  console.log(apiUrls)
-  return fetch(apiUrls.contact, {
+const ApiContact = (url, data) => {
+  return fetch(url, {
     method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-}
-
-const ApiReview = (data) => {
-  console.log(apiUrls)
-  return fetch(apiUrls.review, {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json'
-    }
+    body: data,
   })
 }
 
@@ -30,37 +13,21 @@ export default function () {
     form.addEventListener('submit', (e) => {
       e.preventDefault()
       const formData = new FormData(form)
+      const action = form.getAttribute('action')
 
       const btnText = button.textContent
       button.setAttribute('disabled', true)
-      button.textContent = 'Loading...'
-      ApiContact(formDataToObject(formData)).then(() => {
+      button.textContent = 'Загрузка...'
+      ApiContact(action, formData).then((res) => {
         console.log('contact success')
-        //window.modalApplicatioAccepted.open()
+        if (res.status === 400) {
+          window.modalApplicatioAccepted.open()
+          console.log('contact success')
+        } else {
+          throw res
+        }
       }).catch(() => {
         alert('contact error')
-      }).finally(() => {
-        button.textContent = btnText
-        button.removeAttribute('disabled')
-      })
-    })
-  })
-
-  const reviewForms = document.querySelectorAll('.js-review-form')
-  reviewForms.forEach(form => {
-    const button = form.querySelector('.js-review-btn')
-    form.addEventListener('submit', (e) => {
-      e.preventDefault()
-      const formData = new FormData(form)
-
-      const btnText = button.textContent
-      button.setAttribute('disabled', true)
-      button.textContent = 'Loading...'
-      ApiReview(formDataToObject(formData)).then(() => {
-        console.log('review success')
-        window.modalApplicatioAccepted.open()
-      }).catch(() => {
-        alert('review error')
       }).finally(() => {
         button.textContent = btnText
         button.removeAttribute('disabled')

@@ -18,4 +18,26 @@
     line-height: 144.4%;
     margin-bottom: 4rem;
   }
+  @media (max-width: 48em) {
+    padding: 0 1.5rem;
+    margin-bottom: 10rem;
+    &__inner {
+      display: block;
+    }
+    &__img {
+      width: 100%;
+      margin-right: 0;
+      border-radius: 2rem;
+      overflow: hidden;
+      margin-bottom: 4rem;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__text {
+      font-size: 1.4rem;
+      margin-bottom: 5rem;
+    }
+
+  }
 }
